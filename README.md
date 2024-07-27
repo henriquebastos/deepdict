@@ -1,6 +1,4 @@
-# DeepDict: Easy traversal of deeply nested dicts.
-
-Beautiful and readable way to manipulate deeply-nested dicts like JSON-style objects.
+# DeepDict: The easy way to manipulate deeply-nested dicts like JSON-style objects.
 
 ## What you can do with DeepDict?
 

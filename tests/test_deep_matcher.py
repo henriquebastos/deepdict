@@ -210,6 +210,12 @@ class TestDeepMatcher:
         assert DeepDict(raw_data) == {
             "1": ...,  # [1]
             "3": ["index1", ...],  # [3]
-            "4": [{"name": re.compile("ba."), ...: ...,}, ...],  # [4]
+            "4": [
+                {
+                    "name": re.compile("ba."),
+                    ...: ...,
+                },
+                ...,
+            ],  # [4]
             ...: ...,  # [2]
         }

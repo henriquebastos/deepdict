@@ -1,10 +1,11 @@
 # Pip imports
+from unittest import mock
+
 import pytest
 
 # Internal imports
 from deepdict import DeepDictIndexError, DeepDictKeyError, DeepDictValueError
 from deepdict.core import DeepDict, DeepList
-from unittest import mock
 
 
 @pytest.fixture

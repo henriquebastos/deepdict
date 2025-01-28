@@ -2,7 +2,7 @@
 import pytest
 
 # Internal imports
-from deepdict.merger import (
+from dictdeeper.merger import (
     CombineLists,
     DeepMerger,
     MergeDicts,

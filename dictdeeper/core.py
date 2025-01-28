@@ -4,8 +4,8 @@ from __future__ import annotations
 from collections.abc import Mapping, Sequence
 
 # Internal imports
-from deepdict.exceptions import DeepDictIndexError, DeepDictKeyError, DeepDictValueError, MatcherError
-from deepdict.matcher import DictMatcher, ListMatcher
+from dictdeeper.exceptions import DeepDictIndexError, DeepDictKeyError, DeepDictValueError, MatcherError
+from dictdeeper.matcher import DictMatcher, ListMatcher
 
 
 def DeepFactory(obj):  # noqa

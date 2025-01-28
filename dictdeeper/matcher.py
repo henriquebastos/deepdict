@@ -13,7 +13,7 @@ from uuid import UUID
 import arrow
 
 # Internal imports
-from deepdict.exceptions import (
+from dictdeeper.exceptions import (
     MatcherDatetimeMismatch,
     MatcherError,
     MatcherKeysDoNotMatch,

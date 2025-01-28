@@ -1,6 +1,6 @@
-# DeepDict: The easy way to manipulate deeply-nested dicts like JSON-style objects.
+# DictDeeper: The easy way to manipulate deeply-nested dicts like JSON-style objects.
 
-## What you can do with DeepDict?
+## What you can do with DictDeeper?
 
 1. You can navigate to any depth with a simple dotted-string key notation.
 2. You can even transparently navigate within lists inside dicts.
@@ -14,7 +14,8 @@ To access values nested in an object using a dotted-key notation,
 wrap the object using `DeepDict`, then use the standard `dict` interface:
 
 ```python
-from deepdict import DeepDict
+from dictdeeper import DeepDict
+
 
 request_body = DeepDict(request.json())
 is_scheduled = request_body.get("data.attributes.date_scheduled") is not None

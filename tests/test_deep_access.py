@@ -4,8 +4,8 @@ from unittest import mock
 import pytest
 
 # Internal imports
-from deepdict import DeepDictIndexError, DeepDictKeyError, DeepDictValueError
-from deepdict.core import DeepDict, DeepList
+from dictdeeper import DeepDictIndexError, DeepDictKeyError, DeepDictValueError
+from dictdeeper.core import DeepDict, DeepList
 
 
 @pytest.fixture

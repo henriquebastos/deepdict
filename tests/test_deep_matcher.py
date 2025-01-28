@@ -10,8 +10,8 @@ import arrow
 import pytest
 
 # Internal imports
-from deepdict.core import DeepDict
-from deepdict.exceptions import (
+from dictdeeper.core import DeepDict
+from dictdeeper.exceptions import (
     MatcherDatetimeMismatch,
     MatcherKeysDoNotMatch,
     MatcherLengthTooLong,
@@ -22,7 +22,7 @@ from deepdict.exceptions import (
     MatcherTypeMismatch,
     MatcherValueMismatch,
 )
-from deepdict.matcher import DictMatcher
+from dictdeeper.matcher import DictMatcher
 
 
 @pytest.fixture
@@ -46,7 +46,7 @@ class TestDeepMatcher:
     def data(self, raw_data):
         return DictMatcher(raw_data)
 
-    def test_deepdict_convenience_method(self, raw_data):
+    def test_dictdeeper_convenience_method(self, raw_data):
         assert DeepDict(raw_data) == raw_data
 
     def test_matches_exact(self, data, raw_data):

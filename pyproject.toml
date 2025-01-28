@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "deepdict"
+name = "dictdeeper"
 version = "1.2"
-description = "DeepDict: Easy traversal of deeply nested dicts."
+description = "DictDeeper: Easy traversal of deeply nested dicts."
 authors = ["Henrique Bastos <henrique@bastos.net>", "Matthew Scott <matt@11craft.com>"]
 license = "MIT"
 readme = "README.md"
 packages = [
-    {include = "deepdict", from = "."},
+    {include = "dictdeeper", from = "."},
 ]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -25,10 +25,10 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/henriquebastos/deepdict"
-Documentation = "https://github.com/henriquebastos/deepdict"
-Repository = "https://github.com/henriquebastos/deepdict"
-Issues = "https://github.com/henriquebastos/deepdict/issues"
+Homepage = "https://github.com/henriquebastos/dictdeeper"
+Documentation = "https://github.com/henriquebastos/dictdeeper"
+Repository = "https://github.com/henriquebastos/dictdeeper"
+Issues = "https://github.com/henriquebastos/dictdeeper/issues"
 
 
 [tool.poetry.dependencies]
@@ -44,7 +44,7 @@ isort = "^5.13.2"
 pre-commit = "^3.8.0"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core<2"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]

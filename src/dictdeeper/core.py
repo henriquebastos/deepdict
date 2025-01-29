@@ -1,9 +1,7 @@
 from __future__ import annotations
 
-# Python imports
 from collections.abc import Mapping, Sequence
 
-# Internal imports
 from dictdeeper.exceptions import DeepDictIndexError, DeepDictKeyError, DeepDictValueError, MatcherError
 from dictdeeper.matcher import DictMatcher, ListMatcher
 

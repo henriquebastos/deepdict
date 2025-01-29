@@ -46,7 +46,6 @@ class Matcher(ABC):
 
     @staticmethod
     def validate_match(value, spec, key_location):
-
         # Ellipsis: Always match.
         if spec is ...:
             return True

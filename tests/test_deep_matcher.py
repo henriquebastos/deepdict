@@ -106,7 +106,6 @@ class TestDeepMatcher:
         }
 
     def test_keys_do_not_match(self, data):
-
         with pytest.raises(MatcherKeysDoNotMatch) as e:
             assert data == {"1": ..., "2": ..., "3": ..., "5": ...}
         assert e.value.args == ("", ("1", "2", "3", "4"), ("1", "2", "3", "5"))
@@ -116,7 +115,6 @@ class TestDeepMatcher:
         assert e.value.args == ("2", ("a", "b"), ("a", "b", "c"))
 
     def test_missing_required_key(self, data):
-
         with pytest.raises(MatcherMissingRequiredKey) as e:
             assert data == {"foo": ..., ...: ...}
         assert e.value.args == ("foo",)
@@ -133,7 +131,6 @@ class TestDeepMatcher:
         assert e.value.args == ("1", pattern, "one")
 
     def test_value_mismatch(self, data):
-
         with pytest.raises(MatcherValueMismatch) as e:
             assert data == {"1": "ONE", ...: ...}
         assert e.value.args == ("1", "ONE", "one")

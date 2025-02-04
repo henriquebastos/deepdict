@@ -1,4 +1,3 @@
-# Python imports
 from itertools import zip_longest
 
 

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-# Python imports
 import decimal
 import re
 from abc import ABC, abstractmethod
@@ -9,10 +8,8 @@ from typing import Mapping
 from unittest.mock import sentinel
 from uuid import UUID
 
-# Pip imports
 import arrow
 
-# Internal imports
 from dictdeeper.exceptions import (
     MatcherDatetimeMismatch,
     MatcherError,
@@ -46,7 +43,6 @@ class Matcher(ABC):
 
     @staticmethod
     def validate_match(value, spec, key_location):
-
         # Ellipsis: Always match.
         if spec is ...:
             return True

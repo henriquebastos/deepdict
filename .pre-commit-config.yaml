@@ -7,19 +7,15 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v5.0.0
     hooks:
       - id: check-added-large-files
       - id: check-ast
       - id: check-case-conflict
       - id: check-executables-have-shebangs
       - id: check-merge-conflict
-      - id: check-shebang-scripts-are-executable
-      - id: check-symlinks
       - id: check-toml
-      - id: check-yaml
       - id: debug-statements
-      - id: destroyed-symlinks
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
       - id: fix-encoding-pragma
@@ -30,64 +26,12 @@ repos:
       - id: mixed-line-ending
       - id: trailing-whitespace
 
-  - repo: local
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.9.3
     hooks:
-      # https://black.readthedocs.io/en/stable/
-      # https://github.com/psf/black/blob/main/.pre-commit-hooks.yaml
-      - id: black
-        name: black (local)
-        description: Run black code formatter
-        entry: python -m black
-        language: system
-        require_serial: true
-        types_or:
-          - python
-          - pyi
-
-      # https://pycqa.github.io/isort/
-      # https://github.com/PyCQA/isort/blob/main/.pre-commit-hooks.yaml
-      - id: isort
-        name: isort (local)
-        description: Run isort import formatter
-        entry: python -m isort
-        language: system
-        require_serial: true
-        types_or:
-          - python
-          - pyi
-        args:
-          - --jobs=-1
-          - --python-version=auto
-          - --settings=pyproject.toml
-
-      # https://flake8.pycqa.org/en/latest/
-      # https://github.com/PyCQA/flake8/blob/main/.pre-commit-hooks.yaml
-      - id: flake8
-        name: flake8 (local)
-        description: Run flake8 style linter
-        entry: python -m flake8
-        language: system
-        require_serial: true
-        types_or:
-          - python
-          - pyi
-        args:
-          - --max-line-length=120
-
-      # https://python-poetry.org/docs/pre-commit-hooks/
-      # https://github.com/python-poetry/poetry/blob/master/.pre-commit-hooks.yaml
-      - id: poetry-check
-        name: poetry check (local)
-        description: Ensure pyproject.toml file is valid
-        entry: poetry check -n
-        language: system
-        pass_filenames: false
-        files: ^pyproject\.toml$
-
-      - id: poetry-lock
-        name: poetry lock (local)
-        description: Ensure lock file is up-to-date
-        entry: bash -c 'poetry check --lock -n || poetry lock -n --no-update'
-        language: system
-        pass_filenames: false
-        files: ^(pyproject\.toml|poetry\.lock)$
+      # Run the linter.
+      - id: ruff
+        args: [ --fix ]
+      # Run the formatter.
+      - id: ruff-format

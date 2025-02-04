@@ -62,7 +62,9 @@ assert DeepDict(data) == {
 
 ## Thank you to Routable
 
-[Routable](https://routable.com) sponsored the development of this library. Working at [Routable](https://routable.com) is an awesome experience, with a developer-first culture that fosters innovation and growth. If you're interested in joining a dynamic team, [check out our job opportunities here](https://routable.com/careers/)!
+[Routable](https://routable.com) sponsored the development of this library.
+Working at [Routable](https://routable.com) is an awesome experience, with a developer-first culture that fosters innovation and growth.
+If you're interested in joining a dynamic team, [check out our job opportunities here](https://routable.com/careers/)!
 
 ## Authors
 
